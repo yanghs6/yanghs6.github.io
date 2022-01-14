@@ -18,14 +18,18 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Welcome!                          # the main title
+title: yanghs6's blog!                          # the main title
 
-tagline: yanghs6's blog!   # it will display as the sub-title
+tagline: 환영합니다! Welcome!   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+  관련 기술, 잡담 등이 함께하는 작은 글뭉치들의 둥지입니다!
+  이 블로그는 Chirpy 테마를 사용한 Jekyll을 사용하고 있습니다.
+  그럼, 편안히 둘러보세요!  
+
+# A minimal, portfolio, sidebar,
+# bootstrap Jekyll theme with responsive web design
+# and focuses on text presentation.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://yanghs6.github.io/'
@@ -82,7 +86,7 @@ theme_mode:   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: "/assets/img/favicons/android-chrome-192x192.png"
 
 # boolean type, the global switch for ToC in posts.
 toc: true
