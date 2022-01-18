@@ -1,0 +1,325 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://yanghs6.github.io//</id>
+  <title>yanghs6's blog!</title>
+  <subtitle>관련 기술, 잡담 등이 함께하는 작은 글뭉치들의 둥지입니다! 이 블로그는 Chirpy 테마를 사용한 Jekyll을 사용하고 있습니다. 그럼, 편안히 둘러보세요!  </subtitle>
+  <updated>2022-01-18T15:31:21+09:00</updated>
+  <author>
+    <name>yanghs6</name>
+    <uri>https://yanghs6.github.io//</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="https://yanghs6.github.io//feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="ko"
+    href="https://yanghs6.github.io//"/>
+  <generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator>
+  <rights> © 2022 yanghs6 </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>백준 2178번 미로탐색</title>
+    <link href="https://yanghs6.github.io//posts/0004_boj_2178/" rel="alternate" type="text/html" title="백준 2178번 미로탐색" />
+    <published>2022-01-18T11:02:00+09:00</published>
+  
+    <updated>2022-01-18T11:02:00+09:00</updated>
+  
+    <id>https://yanghs6.github.io//posts/0004_boj_2178/</id>
+    <content src="https://yanghs6.github.io//posts/0004_boj_2178/" />
+    <author>
+      <name>yanghs6</name>
+    </author>
+
+  
+    
+    <category term="Problem_Solve" />
+    
+    <category term="boj" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      정보
+문제 바로가기 [클릭]
+난이도: Silver 1
+관련 개념: #그래프 이론 #그래프 탐색 #너비 우선 탐색
+작성일: 22.01.18
+수정일
+
+
+조건
+
+    
+        시간제한
+        메모리제한
+    
+    
+        1초
+        192 MB
+    
+
+
+
+문제
+N×M크기의 배열로 표현되는 미로가 있다.
+
+    
+        1
+        0
+        1
+        1
+        1
+        1
+    
+    
+        1
+        0
+        1
+        0
+        1
+        0
+    
+    
+        1
+        0
+        1
+        0
+        1
+        1
+ ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>백준 1260번 DFS와 BFS</title>
+    <link href="https://yanghs6.github.io//posts/0003_boj_1260/" rel="alternate" type="text/html" title="백준 1260번 DFS와 BFS" />
+    <published>2022-01-17T20:36:00+09:00</published>
+  
+    <updated>2022-01-18T15:28:19+09:00</updated>
+  
+    <id>https://yanghs6.github.io//posts/0003_boj_1260/</id>
+    <content src="https://yanghs6.github.io//posts/0003_boj_1260/" />
+    <author>
+      <name>yanghs6</name>
+    </author>
+
+  
+    
+    <category term="Problem_Solve" />
+    
+    <category term="boj" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      정보
+문제 바로가기 [클릭]
+난이도: Silver 1
+관련 개념: #그래프 이론 #그래프 탐색 #너비 우선 탐색 #깊이 우선 탐색
+작성일: 22.01.17
+수정일
+
+
+조건
+
+    
+        시간제한
+        메모리제한
+    
+    
+        2초
+        128 MB
+    
+
+
+
+문제
+그래프를 DFS로 탐색한 결과와 BFS로 탐색한 결과를 출력하는 프로그램을 작성하시오. 단, 방문할 수 있는 정점이 여러 개인 경우에는 정점 번호가 작은 것을 먼저 방문하고, 더 이상 방문할 수 있는 점이 없는 경우 종료한다. 정점 번호는 1번부터 N번까지이다.
+
+
+입력
+첫째 줄에 정점의 개수 N(1 ≤ N ≤ 1,000), 간선의 개수 M(1 ≤ M ≤ 10,000), 탐색을 시작할 정점의 ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>문제 풀이 분류</title>
+    <link href="https://yanghs6.github.io//posts/0002_problem_solve/" rel="alternate" type="text/html" title="문제 풀이 분류" />
+    <published>2022-01-17T20:28:00+09:00</published>
+  
+    <updated>2022-01-17T20:28:00+09:00</updated>
+  
+    <id>https://yanghs6.github.io//posts/0002_problem_solve/</id>
+    <content src="https://yanghs6.github.io//posts/0002_problem_solve/" />
+    <author>
+      <name>yanghs6</name>
+    </author>
+
+  
+    
+    <category term="Problem_Solve" />
+    
+    <category term="description" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      백준, 프로그래머스 등 각종 코딩 문제의 풀이를 게시글로 남기고 있습니다.
+
+이전에 올렸던 풀이들은 문제풀이 Github에서 옮기고 있습니다. (0/41)
+
+
+작성일: 20.07.16
+수정일
+20.07.23 - 안내문 변경
+
+21.05.07 - 백준 문제 난이도, 관련 개념 추가
+
+21.05.18 - 프로그래머스 문제 추가
+
+21.12.22 - 각 문제 페이지 -&amp;gt; 리스트 페이지 링크 추가
+
+21.12.23 - 백준 문제 태그에 링크 추가
+
+21.12.31 - 백준 문제 조건 수정, public/img 디렉터리 생성
+
+22.01.13 - 백준 문제별 우수코드에 출처 표기
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>게시글 분류</title>
+    <link href="https://yanghs6.github.io//posts/0001_classify_post/" rel="alternate" type="text/html" title="게시글 분류" />
+    <published>2022-01-17T20:22:00+09:00</published>
+  
+    <updated>2022-01-17T20:22:00+09:00</updated>
+  
+    <id>https://yanghs6.github.io//posts/0001_classify_post/</id>
+    <content src="https://yanghs6.github.io//posts/0001_classify_post/" />
+    <author>
+      <name>yanghs6</name>
+    </author>
+
+  
+    
+    <category term="Programming" />
+    
+    <category term="blog" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      2022-01-17 기준 게시글 분류입니다.
+
+0xxx: 프로그래밍
+
+1xxx: 프로그래밍
+
+2xxx: 문제해결
+
+3xxx: 예비
+
+4xxx: 예비
+
+5xxx: 예비
+
+6xxx: 예비
+
+7xxx: 예비
+
+8xxx: 후기
+
+9xxx: 잡담
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>첫 포스트</title>
+    <link href="https://yanghs6.github.io//posts/9001_first_post/" rel="alternate" type="text/html" title="첫 포스트" />
+    <published>2022-01-14T15:28:00+09:00</published>
+  
+    <updated>2022-01-14T15:28:00+09:00</updated>
+  
+    <id>https://yanghs6.github.io//posts/9001_first_post/</id>
+    <content src="https://yanghs6.github.io//posts/9001_first_post/" />
+    <author>
+      <name>yanghs6</name>
+    </author>
+
+  
+    
+    <category term="Life" />
+    
+    <category term="etc" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      첫포스트입니다..ㅎㅎ
+
+아직 배울 게 많은 개발자입니다!
+
+제 작은 글이 찾아오신 분들께 큰 도움으로 다가갔으면 합니다!
+
+모두모두 환영합니다!
+
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+

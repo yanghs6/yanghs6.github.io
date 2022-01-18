@@ -1,0 +1,79 @@
+[
+  
+  {
+    "title": "백준 2178번 미로탐색",
+    "url": "/posts/0004_boj_2178/",
+    "categories": "Problem_Solve, boj",
+    "tags": "문제풀이(problem_solve), 백준(boj), 그래프이론(graph), 그래프탐색(graph_search), 깊이우선탐색(depth_first_search), 너비우선탐색(breadth_first_search)",
+    "date": "2022-01-18 11:02:00 +0900",
+    
+
+
+
+
+
+    "snippet": "정보문제 바로가기 [클릭]난이도: Silver 1관련 개념: #그래프 이론 #그래프 탐색 #너비 우선 탐색작성일: 22.01.18수정일조건            시간제한        메모리제한                1초        192 MB    문제N×M크기의 배열로 표현되는 미로가 있다.            1        0        1        1        1        1                1        0        1        0        1        0                1        0        1        0        1        1                1        1        1        0        1        1    미로에서 1은 이동할 수 있는 칸을 나타내고, 0은 이동할 수 없는 칸을 나타낸다. 이러한 미로가 주어졌을 때, (1, 1)에서 출발하여 (N, M)의 위치로 이동할 때 지나야 하는 최소의 칸 수를 구하는 프로그램을 작성하시오. 한 칸에서 다른 칸으로 이동할 때, 서로 인접한 칸으로만 이동할 수 있다.위의 예에서는 15칸을 지나야 (N, M)의 위치로 이동할 수 있다. 칸을 셀 때에는 시작 위치와 도착 위치도 포함한다.입력첫째 줄에 두 정수 N, M(2 ≤ N, M ≤ 100)이 주어진다. 다음 N개의 줄에는 M개의 정수로 미로가 주어진다. 각각의 수들은 붙어서 입력으로 주어진다.출력첫째 줄에 지나야 하는 최소의 칸 수를 출력한다. 항상 도착위치로 이동할 수 있는 경우만 입력으로 주어진다.예제 입출력 1입력4 6101111101010101011111011출력15예제 입출력 2입력4 6110110110110111111111101출력9예제 입출력 3입력2 2510111011101110111011101111110111011101110111011101출력38예제 입출력 4입력7 71011111111000110000011000001100000110000011111111출력13코드(파이썬)import sysdef bfs(start):    cnt = 1    queue = [start]    visited = set()    direction = [(1, 0), (-1, 0), (0, 1), (0, -1)]        while (n-1, m-1) not in queue:        cnt += 1                for _ in range(len(queue)):            s = queue.pop(0)            for d in direction:                e = (s[0]+d[0], s[1]+d[1])                                if e[0] &amp;gt; -1 and e[0] &amp;lt; n and\\                   e[1] &amp;gt; -1 and e[1] &amp;lt; m and\\                   maze[e[0]][e[1]] and e not in visited:                    visited.add(e)                    queue.append(e)            return cnt        n, m = map(int, sys.stdin.readline().split())maze = [tuple(map(int, list(l.rstrip(&quot;\\n&quot;)))) for l in sys.stdin.readlines()]print(bfs((0, 0)))특이사항  DFS와 BFS를 동시에 사용  내 코드(31,376KB, 88ms)에 비해 우수한 코드 (바로가기, 30,864KB, 88ms)와 비교                  import sysn, m = map(int, sys.stdin.readline().split())arr = [list(map(int, sys.stdin.readline().rstrip())) for _ in range(n)]dx = [1, -1, 0, 0]dy = [0, 0, -1, 1]queue = [[0, 0]]while queue:    a, b = queue[0][0], queue[0][1]    del queue[0]    for i in range(4):        x = a + dx[i]        y = b + dy[i]        if 0 &amp;lt;= x &amp;lt; n and 0 &amp;lt;= y &amp;lt; m and arr[x][y] == 1:            queue.append([x, y])            arr[x][y] = arr[a][b] + 1print(arr[n - 1][m - 1])                    방문 여부                  기존: visited set으로 방문 여부 확인          개선: queue 하나로 해결                    maze, arr 배열(입력 배열)                  기존: maze에 수정 없음          개선: 각 위치까지의 최단 경로                    참고문헌-"
+  },
+  
+  {
+    "title": "백준 1260번 DFS와 BFS",
+    "url": "/posts/0003_boj_1260/",
+    "categories": "Problem_Solve, boj",
+    "tags": "문제풀이(problem_solve), 백준(boj), 그래프이론(graph), 그래프탐색(graph_search), 깊이우선탐색(depth_first_search), 너비우선탐색(breadth_first_search)",
+    "date": "2022-01-17 20:36:00 +0900",
+    
+
+
+
+
+
+    "snippet": "정보문제 바로가기 [클릭]난이도: Silver 1관련 개념: #그래프 이론 #그래프 탐색 #너비 우선 탐색 #깊이 우선 탐색작성일: 22.01.17수정일조건            시간제한        메모리제한                2초        128 MB    문제그래프를 DFS로 탐색한 결과와 BFS로 탐색한 결과를 출력하는 프로그램을 작성하시오. 단, 방문할 수 있는 정점이 여러 개인 경우에는 정점 번호가 작은 것을 먼저 방문하고, 더 이상 방문할 수 있는 점이 없는 경우 종료한다. 정점 번호는 1번부터 N번까지이다.입력첫째 줄에 정점의 개수 N(1 ≤ N ≤ 1,000), 간선의 개수 M(1 ≤ M ≤ 10,000), 탐색을 시작할 정점의 번호 V가 주어진다. 다음 M개의 줄에는 간선이 연결하는 두 정점의 번호가 주어진다. 어떤 두 정점 사이에 여러 개의 간선이 있을 수 있다. 입력으로 주어지는 간선은 양방향이다.출력첫째 줄에 DFS를 수행한 결과를, 그 다음 줄에는 BFS를 수행한 결과를 출력한다. V부터 방문된 점을 순서대로 출력하면 된다.예제 입출력 1입력4 5 11 21 31 42 43 4출력1 2 4 31 2 3 4예제 입출력 2입력5 5 35 45 21 23 43 1출력3 1 2 5 43 1 4 2 5예제 입출력 3입력1000 1 1000999 1000출력1000 9991000 999코드(파이썬)import syssys.setrecursionlimit(10001)def dfs(num):    dfs_result.append(num)    for end in graph[num]:        if end in graph[num] and end not in dfs_result:            check_dfs.append(end)            dfs(end)            check_dfs.pop()            def bfs(num):    queue = [num]        while queue:        bfs_result.extend(queue)                for _ in range(len(queue)):            start = queue.pop(0)                        for end in graph[start]:                if end not in bfs_result and end not in queue:                    queue.append(end)check_dfs = list()queue = list()dfs_result = list()bfs_result = list()n, m, s = map(int, sys.stdin.readline().split())graph = dict(zip(range(1, n+1), [list() for _ in range(n)]))for n1, n2 in [map(int, line.split()) for line in sys.stdin.readlines()]:    graph[n1].append(n2)    graph[n2].append(n1)    for k in graph:    graph[k].sort()    dfs(s)bfs(s)sys.stdout.write(&quot; &quot;.join(map(str, dfs_result)) + &quot;\\n&quot;)sys.stdout.write(&quot; &quot;.join(map(str, bfs_result)))특이사항  DFS와 BFS를 동시에 사용  내 코드(35,376KB, 312ms)에 비해 우수한 코드 (바로가기, 32,428KB, 108ms)와 비교                  import sysfrom collections import dequedef bfs(graph, v, visited):    queue = deque([v])    visited[v] = True    while queue:        v = queue.popleft()        print(v, end = &#39; &#39;)        for i in graph[v]:            if not visited[i]:                queue.append(i)                visited[i] = Truedef dfs(graph, v, visited):    visited[v] = True    print(v, end = &#39; &#39;)    for i in graph[v]:        if not visited[i]:            dfs(graph, i, visited)n, m, v = map(int, sys.stdin.readline().split())graph = [[]for i in range(n + 1)]for i in range(m):    # a, b 를 입력 받은 후 그래프에 인접 노드로 넣어줌    a, b = map(int, sys.stdin.readline().split())    graph[a].append(b)    graph[b].append(a)# 탐색을 위해 그래프 정렬해줌for i in range(1, n+1):    graph[i].sort()visited = [False]*(n+1)dfs(graph, v, visited)print()visited = [False]*(n+1)bfs(graph, v, visited)                    기존: 간선이 여러 개인 점으로 인해 if문이 복잡해지는 단점 존재      개선: visited 리스트를 전달하는 방식      참고문헌-"
+  },
+  
+  {
+    "title": "문제 풀이 분류",
+    "url": "/posts/0002_problem_solve/",
+    "categories": "Problem_Solve, description",
+    "tags": "문제풀이(problem_solve)",
+    "date": "2022-01-17 20:28:00 +0900",
+    
+
+
+
+
+
+    "snippet": "백준, 프로그래머스 등 각종 코딩 문제의 풀이를 게시글로 남기고 있습니다.이전에 올렸던 풀이들은 문제풀이 Github에서 옮기고 있습니다. (0/41)작성일: 20.07.16수정일20.07.23 - 안내문 변경21.05.07 - 백준 문제 난이도, 관련 개념 추가21.05.18 - 프로그래머스 문제 추가21.12.22 - 각 문제 페이지 -&amp;gt; 리스트 페이지 링크 추가21.12.23 - 백준 문제 태그에 링크 추가21.12.31 - 백준 문제 조건 수정, public/img 디렉터리 생성22.01.13 - 백준 문제별 우수코드에 출처 표기"
+  },
+  
+  {
+    "title": "게시글 분류",
+    "url": "/posts/0001_classify_post/",
+    "categories": "Programming, blog",
+    "tags": "블로그(blog)",
+    "date": "2022-01-17 20:22:00 +0900",
+    
+
+
+
+
+
+    "snippet": "2022-01-17 기준 게시글 분류입니다.0xxx: 프로그래밍1xxx: 프로그래밍2xxx: 문제해결3xxx: 예비4xxx: 예비5xxx: 예비6xxx: 예비7xxx: 예비8xxx: 후기9xxx: 잡담"
+  },
+  
+  {
+    "title": "첫 포스트",
+    "url": "/posts/9001_first_post/",
+    "categories": "Life, etc",
+    "tags": "기타(etc)",
+    "date": "2022-01-14 15:28:00 +0900",
+    
+
+
+
+
+
+    "snippet": "첫포스트입니다..ㅎㅎ아직 배울 게 많은 개발자입니다!제 작은 글이 찾아오신 분들께 큰 도움으로 다가갔으면 합니다!모두모두 환영합니다!"
+  }
+  
+]
+
