@@ -1,5 +1,16 @@
 # The Site Configuration
 
+####
+# 220210 math in jekyll 검색 결과 후 남겨둠
+# 출처: https://mkkim85.github.io/blog-apply-mathjax-to-jekyll-and-github-pages/
+# Conversion
+# markdown: kramdown
+# highlighter: rouge
+# lsi: false
+# excerpt_separator: "\n\n"
+# incremental: false
+####
+
 # Import the theme
 theme: jekyll-theme-chirpy
 
@@ -178,3 +189,4 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
