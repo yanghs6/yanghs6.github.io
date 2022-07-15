@@ -1,0 +1,354 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://yanghs6.github.io//</id>
+  <title>yanghs6's blog!</title>
+  <subtitle>관련 기술, 잡담 등이 함께하는 작은 글뭉치들의 둥지입니다! 이 블로그는 Chirpy 테마를 사용한 Jekyll을 사용하고 있습니다. 그럼, 편안히 둘러보세요!  </subtitle>
+  <updated>2022-07-15T22:49:58+09:00</updated>
+  <author>
+    <name>yanghs6</name>
+    <uri>https://yanghs6.github.io//</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="https://yanghs6.github.io//feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="ko"
+    href="https://yanghs6.github.io//"/>
+  <generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator>
+  <rights> © 2022 yanghs6 </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>백준 2225번 합분해</title>
+    <link href="https://yanghs6.github.io//posts/0106_boj_2225/" rel="alternate" type="text/html" title="백준 2225번 합분해" />
+    <published>2022-07-14T21:57:00+09:00</published>
+  
+    <updated>2022-07-14T21:57:00+09:00</updated>
+  
+    <id>https://yanghs6.github.io//posts/0106_boj_2225/</id>
+    <content src="https://yanghs6.github.io//posts/0106_boj_2225/" />
+    <author>
+      <name>yanghs6</name>
+    </author>
+
+  
+    
+    <category term="Problem_Solve" />
+    
+    <category term="boj" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      정보
+문제 바로가기 [클릭]
+난이도: Gold5
+관련 개념: #다이나믹 프로그래밍 [#수학][https://www.acmicpc.net/problemset?sort=ac_desc&amp;amp;algo=124]
+
+
+조건
+
+
+  
+    
+      시간 제한
+      메모리 제한
+    
+  
+  
+    
+      2 초
+      128 MB
+    
+  
+
+
+
+문제
+0부터 N까지의 정수 K개를 더해서 그 합이 N이 되는 경우의 수를 구하는 프로그램을 작성하시오.
+
+덧셈의 순서가 바뀐 경우는 다른 경우로 센다(1+2와 2+1은 서로 다른 경우). 또한 한 개의 수를 여러 번 쓸 수도 있다.
+
+
+입력
+첫째 줄에 두 정수 N(1 ≤ N ≤ 200), K(1 ≤ K ≤ 200)가 주어진다.
+
+
+출력
+첫째 줄...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>백준 2294번 동전 2</title>
+    <link href="https://yanghs6.github.io//posts/0105_boj_2294/" rel="alternate" type="text/html" title="백준 2294번 동전 2" />
+    <published>2022-07-13T22:15:00+09:00</published>
+  
+    <updated>2022-07-14T21:58:36+09:00</updated>
+  
+    <id>https://yanghs6.github.io//posts/0105_boj_2294/</id>
+    <content src="https://yanghs6.github.io//posts/0105_boj_2294/" />
+    <author>
+      <name>yanghs6</name>
+    </author>
+
+  
+    
+    <category term="Problem_Solve" />
+    
+    <category term="boj" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      정보
+문제 바로가기 [클릭]
+난이도: Gold5
+관련 개념: #다이나믹 프로그래밍
+
+
+조건
+
+
+  
+    
+      시간 제한
+      메모리 제한
+    
+  
+  
+    
+      1 초(추가 시간 없음)
+      128 MB
+    
+  
+
+
+
+문제
+n가지 종류의 동전이 있다. 이 동전들을 적당히 사용해서, 그 가치의 합이 k원이 되도록 하고 싶다. 그러면서 동전의 개수가 최소가 되도록 하려고 한다. 각각의 동전은 몇 개라도 사용할 수 있다.
+
+사용한 동전의 구성이 같은데, 순서만 다른 것은 같은 경우이다.
+
+
+입력
+첫째 줄에 n, k가 주어진다. (1 ≤ n ≤ 100, 1 ≤ k ≤ 10,000) 다음 n개의 줄에는 각각의 동전의 가치가 주어진다. 동전의 가치는 100,000보다 작...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>백준 2467번 용액</title>
+    <link href="https://yanghs6.github.io//posts/0104_boj_2467/" rel="alternate" type="text/html" title="백준 2467번 용액" />
+    <published>2022-07-12T22:14:00+09:00</published>
+  
+    <updated>2022-07-12T22:14:00+09:00</updated>
+  
+    <id>https://yanghs6.github.io//posts/0104_boj_2467/</id>
+    <content src="https://yanghs6.github.io//posts/0104_boj_2467/" />
+    <author>
+      <name>yanghs6</name>
+    </author>
+
+  
+    
+    <category term="Problem_Solve" />
+    
+    <category term="boj" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      정보
+문제 바로가기 [클릭]
+난이도: Gold5
+관련 개념: #투포인터 #이분탐색
+
+
+조건
+
+
+  
+    
+      시간 제한
+      메모리 제한
+    
+  
+  
+    
+      1 초
+      128 MB
+    
+  
+
+
+
+문제
+KOI 부설 과학연구소에서는 많은 종류의 산성 용액과 알칼리성 용액을 보유하고 있다. 각 용액에는 그 용액의 특성을 나타내는 하나의 정수가 주어져있다. 산성 용액의 특성값은 1부터 1,000,000,000까지의 양의 정수로 나타내고, 알칼리성 용액의 특성값은 -1부터 -1,000,000,000까지의 음의 정수로 나타낸다.
+
+같은 양의 두 용액을 혼합한 용액의 특성값은 혼합에 사용된 각 용액의 특성값의 합으로 정의한다. 이 연구소에서는 같은 양의 두 용액을 혼...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>백준 2293번 동전 1</title>
+    <link href="https://yanghs6.github.io//posts/0103_boj_2293/" rel="alternate" type="text/html" title="백준 2293번 동전 1" />
+    <published>2022-07-11T22:18:00+09:00</published>
+  
+    <updated>2022-07-13T22:18:10+09:00</updated>
+  
+    <id>https://yanghs6.github.io//posts/0103_boj_2293/</id>
+    <content src="https://yanghs6.github.io//posts/0103_boj_2293/" />
+    <author>
+      <name>yanghs6</name>
+    </author>
+
+  
+    
+    <category term="Problem_Solve" />
+    
+    <category term="boj" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      정보
+문제 바로가기 [클릭]
+난이도: Gold5
+관련 개념: #다이나믹 프로그래밍
+
+
+조건
+
+
+  
+    
+      시간 제한
+      메모리 제한
+    
+  
+  
+    
+      0.5 초(추가 시간 없음)
+      4 MB
+    
+  
+
+
+
+문제
+n가지 종류의 동전이 있다. 각각의 동전이 나타내는 가치는 다르다. 이 동전을 적당히 사용해서, 그 가치의 합이 k원이 되도록 하고 싶다. 그 경우의 수를 구하시오. 각각의 동전은 몇 개라도 사용할 수 있다.
+
+사용한 동전의 구성이 같은데, 순서만 다른 것은 같은 경우이다.
+
+
+입력
+첫째 줄에 n, k가 주어진다. (1 ≤ n ≤ 100, 1 ≤ k ≤ 10,000) 다음 n개의 줄에는 각각의 동전의 가치가 주어진다. 동전의 가치는 100,...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>백준 1715번 카드 정렬하기</title>
+    <link href="https://yanghs6.github.io//posts/0102_boj_1715/" rel="alternate" type="text/html" title="백준 1715번 카드 정렬하기" />
+    <published>2022-07-05T23:18:00+09:00</published>
+  
+    <updated>2022-07-11T22:18:11+09:00</updated>
+  
+    <id>https://yanghs6.github.io//posts/0102_boj_1715/</id>
+    <content src="https://yanghs6.github.io//posts/0102_boj_1715/" />
+    <author>
+      <name>yanghs6</name>
+    </author>
+
+  
+    
+    <category term="Problem_Solve" />
+    
+    <category term="boj" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      정보
+문제 바로가기 [클릭]
+난이도: Gold4
+관련 개념: #자료구조 #그리디 알고리즘 #우선순위큐
+
+
+조건
+
+
+  
+    
+      시간 제한
+      메모리 제한
+    
+  
+  
+    
+      2 초
+      128 MB
+    
+  
+
+
+
+문제
+정렬된 두 묶음의 숫자 카드가 있다고 하자. 각 묶음의 카드의 수를 A, B라 하면 보통 두 묶음을 합쳐서 하나로 만드는 데에는 A+B 번의 비교를 해야 한다. 이를테면, 20장의 숫자 카드 묶음과 30장의 숫자 카드 묶음을 합치려면 50번의 비교가 필요하다.
+
+매우 많은 숫자 카드 묶음이 책상 위에 놓여 있다. 이들을 두 묶음씩 골라 서로 합쳐나간다면, 고르는 순서에 따라서 비교 횟수가 매우 달라진다. 예를 들어 10장, 20장, 40장...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
