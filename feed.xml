@@ -1,0 +1,360 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://yanghs6.github.io//</id>
+  <title>yanghs6's blog!</title>
+  <subtitle>관련 기술, 잡담 등이 함께하는 작은 글뭉치들의 둥지입니다! 이 블로그는 Chirpy 테마를 사용한 Jekyll을 사용하고 있습니다. 그럼, 편안히 둘러보세요!  </subtitle>
+  <updated>2023-01-02T17:24:43+09:00</updated>
+  <author>
+    <name>yanghs6</name>
+    <uri>https://yanghs6.github.io//</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="https://yanghs6.github.io//feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="ko"
+    href="https://yanghs6.github.io//"/>
+  <generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator>
+  <rights> © 2023 yanghs6 </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>2022년 회고</title>
+    <link href="https://yanghs6.github.io//posts/9002_2022_retrospect/" rel="alternate" type="text/html" title="2022년 회고" />
+    <published>2022-12-31T21:52:00+09:00</published>
+  
+    <updated>2023-01-01T00:19:06+09:00</updated>
+  
+    <id>https://yanghs6.github.io//posts/9002_2022_retrospect/</id>
+    <content src="https://yanghs6.github.io//posts/9002_2022_retrospect/" />
+    <author>
+      <name>yanghs6</name>
+    </author>
+
+  
+    
+    <category term="Life" />
+    
+    <category term="retrospect" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      들어가기 앞서
+이번 2022년은 저에게 있어 참으로 뜻깊고 즐겁고 치열한 한 해로 남습니다.
+
+빠르게 회고해보자면 다음과 같아요!
+
+
+  국비교육 수강
+  1개월 간의 인턴
+  첫 취업!
+
+
+
+1. 국비교육 수강: 데이터에 대해 조금 더 배워보자
+
+문제풀이 회고 글에서 얼핏 확인하실 수 있겠지만 상반기 동안 국비교육을 수강하였습니다.
+
+당시에는 프로젝트형빅데이터분석서비스개발, 현재는 \[멀티잇\]데이터 분석 서비스 개발자 취업캠프(융합PJT) 라는 교육이었습니다.
+
+약 5개월 동안 대면과 비대면을 번갈아가며 수강하였습니다.
+
+
+
+(결석 2회는 예비군 1회, 마지막날 퇴실을 놓쳐서 1회입니다)
+
+커리큘럼: 기초부터 차근차근
+
+  HTTP, CSS, JavaScript 등 웹 기초
+  Python 기초 및...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>220일 문제 풀이 여정의 끝과 새로운 시작</title>
+    <link href="https://yanghs6.github.io//posts/0111_ps_retrospect/" rel="alternate" type="text/html" title="220일 문제 풀이 여정의 끝과 새로운 시작" />
+    <published>2022-07-31T22:47:00+09:00</published>
+  
+    <updated>2022-07-31T22:47:00+09:00</updated>
+  
+    <id>https://yanghs6.github.io//posts/0111_ps_retrospect/</id>
+    <content src="https://yanghs6.github.io//posts/0111_ps_retrospect/" />
+    <author>
+      <name>yanghs6</name>
+    </author>
+
+  
+    
+    <category term="Problem_Solve" />
+    
+    <category term="boj" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      발단: 일단 뭐라도 해보자!
+
+
+2021년 겨울방학, 4학년 2학기를 마쳐가며 자신을 되돌아보았습니다.
+
+주변 친구들에 비해 뚜렷한 장점이 보이지 않았습니다.
+
+무기력함을 깨기 위해, 그리고 무언가를 루틴처럼 수행해보고자 무작정 코딩 문제를 마음먹었습니다.
+
+이후 어떠한 방식으로 진행할지 구체적으로 그려보았습니다.
+
+그 결과 매주 평일마다 프로그래밍 문제 1개 풀기를 통해 파이썬과 알고리즘에 숙련도를 키우자는 목표를 세웠습니다.
+
+
+전개: 50일, 100일, 150일, …
+
+
+
+평일 동안 하루 1개의 백준 문제 풀기.
+
+정말 단순해 보이는 계획은 매주 차곡차곡 쌓여갔습니다.
+
+하지만 생각보다 다양한 상황이 펼쳐졌습니다. 물 위의 백조의 모습 아래에는 열심히 헤엄치는 물갈퀴가 있듯 저 역시 보이지 않는 ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>백준 2166번 다각형의 면적</title>
+    <link href="https://yanghs6.github.io//posts/0110_boj_2166/" rel="alternate" type="text/html" title="백준 2166번 다각형의 면적" />
+    <published>2022-07-26T22:17:00+09:00</published>
+  
+    <updated>2022-07-26T22:17:00+09:00</updated>
+  
+    <id>https://yanghs6.github.io//posts/0110_boj_2166/</id>
+    <content src="https://yanghs6.github.io//posts/0110_boj_2166/" />
+    <author>
+      <name>yanghs6</name>
+    </author>
+
+  
+    
+    <category term="Problem_Solve" />
+    
+    <category term="boj" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      정보
+문제 바로가기 [클릭]
+난이도: Gold5
+관련 개념: #기하학 #다각형의 넓이
+
+
+조건
+
+
+  
+    
+      시간 제한
+      메모리 제한
+    
+  
+  
+    
+      2 초
+      128 MB
+    
+  
+
+
+
+문제
+2차원 평면상에 N(3 ≤ N ≤ 10,000)개의 점으로 이루어진 다각형이 있다. 이 다각형의 면적을 구하는 프로그램을 작성하시오.
+
+
+입력
+첫째 줄에 N이 주어진다. 다음 N개의 줄에는 다각형을 이루는 순서대로 N개의 점의 x, y좌표가 주어진다. 좌표값은 절댓값이 100,000을 넘지 않는 정수이다.
+
+
+출력
+첫째 줄에 면적을 출력한다. 면적을 출력할 때에는 소수점 아래 둘째 자리에서 반올림하여 첫째 자리까지 출력한다.
+
+
+예제 입출력 1
+입력
+4
+...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>백준 2661번 좋은수열</title>
+    <link href="https://yanghs6.github.io//posts/0109_boj_2661/" rel="alternate" type="text/html" title="백준 2661번 좋은수열" />
+    <published>2022-07-25T22:14:00+09:00</published>
+  
+    <updated>2022-07-25T22:14:00+09:00</updated>
+  
+    <id>https://yanghs6.github.io//posts/0109_boj_2661/</id>
+    <content src="https://yanghs6.github.io//posts/0109_boj_2661/" />
+    <author>
+      <name>yanghs6</name>
+    </author>
+
+  
+    
+    <category term="Problem_Solve" />
+    
+    <category term="boj" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      정보
+문제 바로가기 [클릭]
+난이도: Gold4
+관련 개념: #백트래킹
+
+
+조건
+
+
+  
+    
+      시간 제한
+      메모리 제한
+    
+  
+  
+    
+      1 초
+      128 MB
+    
+  
+
+
+
+문제
+숫자 1, 2, 3으로만 이루어지는 수열이 있다. 임의의 길이의 인접한 두 개의 부분 수열이 동일한 것이 있으면, 그 수열을 나쁜 수열이라고 부른다. 그렇지 않은 수열은 좋은 수열이다.
+
+다음은 나쁜 수열의 예이다.
+
+
+  33
+  32121323
+  123123213
+
+
+다음은 좋은 수열의 예이다.
+
+
+  2
+  32
+  32123
+  1232123
+
+
+길이가 N인 좋은 수열들을 N자리의 정수로 보아 그중 가장 작은 수를 나타내는 수열을 구하는 프로그램을 작성하라. ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>백준 17609번 회문</title>
+    <link href="https://yanghs6.github.io//posts/0108_boj_17609/" rel="alternate" type="text/html" title="백준 17609번 회문" />
+    <published>2022-07-22T22:18:00+09:00</published>
+  
+    <updated>2022-07-22T22:18:00+09:00</updated>
+  
+    <id>https://yanghs6.github.io//posts/0108_boj_17609/</id>
+    <content src="https://yanghs6.github.io//posts/0108_boj_17609/" />
+    <author>
+      <name>yanghs6</name>
+    </author>
+
+  
+    
+    <category term="Problem_Solve" />
+    
+    <category term="boj" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      정보
+문제 바로가기 [클릭]
+난이도: Gold5
+관련 개념: #구현 #투포인터 #문자열
+
+
+조건
+
+
+  
+    
+      시간 제한
+      메모리 제한
+    
+  
+  
+    
+      1 초(추가 시간 없음)
+      512 MB
+    
+  
+
+
+
+문제
+회문(回文) 또는 팰린드롬(palindrome)은 앞 뒤 방향으로 볼 때 같은 순서의 문자로 구성된 문자열을 말한다. 예를 들어 ‘abba’ ‘kayak’, ‘reviver’, ‘madam’은 모두 회문이다. 만일 그 자체는 회문이 아니지만 한 문자를 삭제하여 회문으로 만들 수 있는 문자열이라면 우리는 이런 문자열을 “유사회문”(pseudo palindrome)이라고 부른다. 예를 들어 ‘summuus’는 5번째나 혹은 6번째 문자 ‘...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
