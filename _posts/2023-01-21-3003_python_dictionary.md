@@ -1,6 +1,6 @@
 ---
 date: 2023-01-21 11:55:00 +/-0900
-title: [Python] Dictionary
+title: "[Python] Dictionary"
 categories: [Tech, python]
 tags: [기술(tech), 파이썬(python), 딕셔너리(dictionary), 팁(tip)]
 
@@ -17,7 +17,7 @@ tags: [기술(tech), 파이썬(python), 딕셔너리(dictionary), 팁(tip)]
 
 파이썬의 딕셔너리는 파이썬의 기본 자료형 중 하나입니다.
 
-[해시 게시글]({% post_url 2023-01-13-1003_hash_basic %})에서 이야기한 해시테이블 자료구조가 바로 딕셔너리입니다.
+[해시 게시글]({% post_url 2023-01-13-1001_hash_basic %})에서 이야기한 해시테이블 자료구조가 바로 딕셔너리입니다.
 
 ### 딕셔너리가 필요한 이유
 
