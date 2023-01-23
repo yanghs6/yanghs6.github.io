@@ -1,6 +1,6 @@
 ---
 date: 2023-01-21 11:55:00 +/-0900
-title: Python - Dictionary
+title: [Python] Dictionary
 categories: [Tech, python]
 tags: [기술(tech), 파이썬(python), 딕셔너리(dictionary), 팁(tip)]
 
