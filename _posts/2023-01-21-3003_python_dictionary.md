@@ -65,7 +65,7 @@ dict_grade = {"English":90,"Math":100,"Art":80,"Music":70}
 
 ## 간단한 사용법
 
-### 1. 생성하기
+### ① 생성하기
 
 ```python
 # 1. {, } 기호 사용
@@ -75,7 +75,7 @@ dict_animal = {"name":"blue", "age":5, "species":"cat"}
 dict_animal = dict(name="blue", age=5, species="cat")
 ```
 
-### 2. 접근하기
+### ② 접근하기
 
 ```python
 # 1. dict 생성
@@ -97,7 +97,7 @@ dict_animal["age"] = 10
 print(dict_animal["age"])           # 10
 ```
 
-### 3. 기타 매소드 사용해보기
+### ③ 기타 매소드 사용해보기
 
 ```python
 dict_animal = {"name":"blue", "age":5, "species":"cat"}
@@ -133,7 +133,7 @@ dict_animal3 = dict.fromkeys(["name", "age", "species"], "Not Set")
 print(dict_animal3)
 ```
 
-### 4. 조건문, 반복문 사용해보기
+### ④ 조건문, 반복문 사용해보기
 
 ```python
 # 1. dict 생성

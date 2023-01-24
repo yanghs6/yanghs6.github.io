@@ -168,7 +168,7 @@ _코드이미지_
 
 ```functools```의 ```reduce``` 함수와 ```filter``` 함수를 활용하여 반복문 없이 하나로 합쳐진 딕셔너리를 만들었습니다.
 
-빨간 박스인 ```reduce``` 함수는 크게 파란 박스의 function과 노란 박스의 iterable가 필요합니다.
+빨간 박스인 ```reduce``` 함수는 크게 파란 박스의 function과 노란 박스의 iterable이 필요합니다.
 
 파란 박스인 function에서는 ```lambda``` 표현식을 활용하여 acc(누적된 딕셔너리)와 cur(현재 딕셔너리)를 \| 연산자로 합칩니다.
 
