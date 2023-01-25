@@ -163,8 +163,8 @@ from functools import reduce
 dict_hobby = reduce(lambda acc, cur: acc | cur, filter(lambda x: x != None, dict_survey["hobby"]))
 ```
 
-![코드 이미지](/assets/img/develop/3004/3004_code.png)
-_코드이미지_
+![코드 이미지](/assets/img/develop/3004/3004_01_code.png)
+_[그림01] 코드 이미지_
 
 ```functools```의 ```reduce``` 함수와 ```filter``` 함수를 활용하여 반복문 없이 하나로 합쳐진 딕셔너리를 만들었습니다.
 

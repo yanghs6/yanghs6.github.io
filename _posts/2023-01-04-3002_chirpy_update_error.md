@@ -43,8 +43,8 @@ Jekyll은 모든 글이 _post/에 마크다운 형식으로 저장됩니다.
 
 그런데 어찌된 영문인지 빌드부터 실패합니다.
 
-![첫 실패](/assets/img/develop/3002/3002_first_fail.png)
-_첫 실패_
+![첫 실패](/assets/img/develop/3002/3002_01_first_fail.png)
+_[그림01] 첫 실패_
 
 다시 블로그를 운영하고자 github actions의 로그를 확인하면서 push를 반복하게 됩니다.
 
@@ -77,13 +77,13 @@ _config.yml 파일에서 base_url 항목을 수정하여 해결하였습니다.
 
 이 오류는 chirpy 테마의 버전이 올라가면서 이전과 deploy 방식이 달라진 것이 원인이었습니다.
 
-![chirpy deploy 변화](/assets/img/develop/3002/3002_chirpy_deploy_change.png)
-_deploy 방식 변화_
+![chirpy deploy 변화](/assets/img/develop/3002/3002_02_chirpy_deploy_change.png)
+_[그림02] deploy 방식 변화_
 
 이는 pages 설정에서 source를 **<u>GitHub Actions</u>**로 수정하여 해결하였습니다.
 
-![github pages의 2가지 방식](/assets/img/develop/3002/3002_github_pages_source.png)
-_github pages의 2가지 방식_
+![github pages의 2가지 방식](/assets/img/develop/3002/3002_03_github_pages_source.png)
+_[그림03] github pages의 2가지 방식_
 
 2가지 방식의 차이를 찾아본 결과를 다음 표로 작성하였습니다.
 
@@ -101,8 +101,8 @@ Github Actions에 대한 자세한 설명은 [다음 공식 문서 링크](https
 ---
 ## 결말: 배포 완료, 안정화가 되다
 
-![안정화된 github action](/assets/img/develop/3002/3002_github_action_result.png)
-_안정화된 github action_
+![안정화된 github action](/assets/img/develop/3002/3002_04_github_action_result.png)
+_[그림04] 안정화된 github action_
 
 3개의 오류를 해결하고서야 배포가 안정화되었습니다.
 
