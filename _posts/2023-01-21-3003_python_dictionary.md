@@ -1,8 +1,8 @@
 ---
 date: 2023-01-21 11:55:00 +/-0900
-title: "[Python] Dictionary"
-categories: [Tech, python]
-tags: [기술(tech), 파이썬(python), 딕셔너리(dictionary), 팁(tip)]
+title: "[Python] Dictionary 살펴보기"
+categories: [Develop, python]
+tags: [개발(develop), 파이썬(python), 딕셔너리(dictionary), 팁(tip)]
 
 ---
 ## 개요
