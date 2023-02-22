@@ -1,6 +1,6 @@
 ---
 date: 2023-01-21 11:55:00 +/-0900
-title: "[Python] Dictionary 살펴보기"
+title: "[Python] Dictionary"
 categories: [Develop, python]
 tags: [개발(develop), 파이썬(python), 딕셔너리(dictionary), 팁(tip)]
 
