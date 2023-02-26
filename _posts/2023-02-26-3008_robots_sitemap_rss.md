@@ -100,7 +100,7 @@ Sitemap: https://yanghs6.github.io/sitemap.xml
 
 우선 robots.txt는 사이트의 루트에 위치해야 합니다.
 
-예를 들어, 현재 블로그의 robots.txt 파일은 [yanghs6.github.io/robots.txt](yanghs6.github.io/robots.txt)을 통해 접근할 수 있습니다.
+예를 들어, 현재 블로그의 robots.txt 파일은 [yanghs6.github.io/robots.txt](/robots.txt)을 통해 접근할 수 있습니다.
 
 또한 robots.txt는 일종의 권고안으로 강제성이 없습니다.
 
