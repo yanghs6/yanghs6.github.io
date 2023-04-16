@@ -11,7 +11,7 @@ tags: [데이터(data), 개념(concept), 역사(history), 빅데이터(bigdata),
   1. [[Data] "빅데이터를 지탱하는 기술" 정리하기 - 1-1 [배경] 빅데이터의 정착]({% post_url 2023-03-12-5001_1_1_bigdata_history %})
   2. [[Data] "빅데이터를 지탱하는 기술" 정리하기 - 1-2 빅데이터 시대의 데이터 분석 기반]({% post_url 2023-03-19-5002_1_2_analysis_based_data %})
   3. [[Data] "빅데이터를 지탱하는 기술" 정리하기 - 1-3 [속성 학습] 스크립트 언어에 대한 특별 분석과 데이터 프레임]({% post_url 2023-03-26-5003_1_3_script_language_and_dataframe %})
-  4. [[Data] [빅데이터를 지탱하는 기술] 정리하기 - 1-4 BI 도구와 모니터링]({% post_url 2023-04-09-5004_1_4_BI_tool_and_monitoring %})
+  4. [[Data] "빅데이터를 지탱하는 기술" 정리하기 - 1-4 BI 도구와 모니터링]({% post_url 2023-04-09-5004_1_4_BI_tool_and_monitoring %})
 
 안녕하세요.
 
