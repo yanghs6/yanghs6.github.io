@@ -1,7 +1,7 @@
 ---
 date: 2023-05-21 16:26:00 +/-0900
 title: "[Python] Python Logging 기본"
-categories: [Data, datapipeline]
+categories: [Develop, python]
 tags: [파이썬(python), 로깅(logging)]
 
 ---
