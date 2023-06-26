@@ -1,6 +1,6 @@
 ---
 date: 2023-02-19 21:10:00 +/-0900
-title: "[CS] 프로세스와 스레드 01 - 기본 개념"
+title: "[CS] 프로세스와 스레드 01 - 프로세스의 기본 개념"
 categories: [Computer_Science, concept]
 tags: [컴퓨터과학(computer_science), 개념(concept), 프로그램(program), 프로세스(process), 스레드(thread), 메모리(memory), 프로세스제어블록(pcb), 문맥교환(context_switch)]
 
@@ -8,8 +8,8 @@ tags: [컴퓨터과학(computer_science), 개념(concept), 프로그램(program)
 ## 개요
 
 - 프로세스 시리즈
-  1. [[CS] 프로세스와 스레드 01 - 기본 개념]({% post_url 2023-02-19-1002_process_thread %})
-  2. [[CS] 프로세스와 스레드 02 - 프로세스의 상태와 교착상태]({% post_url 2023-03-03-1003_process_state %})
+  1. [[CS] 프로세스와 스레드 01 - 프로세스의 기본 개념]({% post_url 2023-02-19-1002_process_thread %})
+  2. [[CS] 프로세스와 스레드 02 - 프로세스의 상태]({% post_url 2023-03-03-1003_process_state %})
 
 안녕하세요.
 
