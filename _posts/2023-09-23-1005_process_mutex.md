@@ -12,6 +12,7 @@ tags: [컴퓨터과학(computer_science), 개념(concept), 프로그램(program)
   2. [[CS] 프로세스와 스레드 02 - 프로세스의 상태]({% post_url 2023-03-03-1003_process_state %})
   3. [[CS] 프로세스와 스레드 03 - 스레드의 개념과 구현]({% post_url 2023-07-16-1004_process_thread %})
   4. [[CS] 프로세스와 스레드 04 - 프로세스와 상호배제]({% post_url 2023-09-23-1005_process_mutex %})
+  5. [[CS] 프로세스와 스레드 05 - 프로세스와 여러 현상]({% post_url 2023-09-30-1006_process_phenomena %})
 
 안녕하세요.
 
