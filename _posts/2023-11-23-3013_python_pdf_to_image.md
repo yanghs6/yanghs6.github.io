@@ -2,7 +2,7 @@
 date: 2023-11-23 19:35:00 +/-0900
 title: "[Python] Python convert PDF to Image"
 categories: [Develop, python]
-tags: [파이썬(python), 이미지(image), 변환(convert), pdf, pypdf, pymupdf, pdf2image]
+tags: [개발(develop), 파이썬(python), 이미지(image), pdf]
 
 ---
 ## 개요

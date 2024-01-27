@@ -2,7 +2,7 @@
 date: 2023-09-30 13:16:00 +/-0900
 title: "[CS] 프로세스와 스레드 05 - 프로세스와 여러 현상"
 categories: [Computer_Science, concept]
-tags: [컴퓨터과학(computer_science), 개념(concept), 교착상태(deadlock), 경쟁상태(race_condition), 기아상태(starvation), 호위효과(convoy_effect), 우선순위역전(priority_inversion), 스래싱(thrashing), 문맥교환오버헤드(context_switching_overhead)]
+tags: [컴퓨터과학(computer_science), 개념(concept), 프로세스(process)]
 
 ---
 ## 개요

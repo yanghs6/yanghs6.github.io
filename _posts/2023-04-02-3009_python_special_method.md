@@ -2,7 +2,7 @@
 date: 2023-04-02 21:04:00 +/-0900
 title: "[Python] Python 특수 메서드"
 categories: [Develop, python]
-tags: [개발(develop), 파이썬(python), 특수메서드(special_method), 클래스(class), 오버로딩(overloading), 내장형(builtin), 데이터모델(data_model), 생성자(constructor), 이터레이터(iterator)]
+tags: [개발(develop), 파이썬(python), 특수메서드(special_method), 오버로딩(overloading), 데이터모델(data_model), 생성자(constructor), 이터레이터(iterator)]
 
 ---
 ## 개요
