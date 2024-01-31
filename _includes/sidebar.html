@@ -1,0 +1,259 @@
+<!--
+  The Side Bar
+-->
+
+<div id="sidebar" class="d-flex flex-column align-items-end">
+  <div class="profile-wrapper text-center">
+    <div id="avatar">
+      <a href="{{ '/' | relative_url }}" class="mx-auto">
+        {% if site.avatar != empty and site.avatar %}
+          {% capture avatar_url %}
+            {% if site.avatar contains '://' %}
+              {{ site.avatar }}
+            {% elsif site.img_cdn != empty and site.img_cdn %}
+              {{ site.avatar | prepend: site.img_cdn }}
+            {% else %}
+              {{ site.avatar | relative_url }}
+            {% endif %}
+          {% endcapture %}
+          <img src="{{ avatar_url | strip }}" alt="avatar" onerror="this.style.display='none'">
+        {% endif %}
+      </a>
+    </div>
+
+    <div class="site-title">
+      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    </div>
+    <div class="site-subtitle font-italic">{{ site.tagline }}</div>
+
+  </div><!-- .profile-wrapper -->
+
+  <ul class="w-100" style="overflow: auto; height: auto;">
+
+    <!-- home -->
+    <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
+      <a href="{{ '/' | relative_url }}" class="nav-link">
+        {%- comment -%} <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> {%- endcomment -%}
+        <span class="ml-xl-3 mr-xl-3">{{ site.data.locales[site.lang].tabs.home | upcase }}</span>
+      </a>
+    </li>
+
+    <hr/>
+
+    <!-- the real tabs -->
+    {% assign HEAD_PREFIX = "h_" %}
+    {% assign LIST_PREFIX = "l_" %}
+
+    {% assign group_index = 0 %}
+
+    {% assign sort_categories = site.categories | sort %}
+
+    {% for category in sort_categories %}
+      {% assign category_name = category | first %}
+      {% assign posts_of_category = category | last %}
+      {% assign first_post = posts_of_category | first %}
+
+      {% if category_name == first_post.categories[0] %}
+        {% assign sub_categories = "" | split: "" %}
+
+        {% for post in posts_of_category %}
+          {% assign second_category = post.categories[1] %}
+          {% if second_category %}
+            {% unless sub_categories contains second_category %}
+              {% assign sub_categories = sub_categories | push: second_category %}
+            {% endunless %}
+          {% endif %}
+        {% endfor %}
+
+        {% assign sub_categories = sub_categories | sort %}
+        {% assign sub_categories_size = sub_categories | size %}
+        
+        {% capture collapse_id %}collapse_menu_{{group_index}}{% endcapture %}
+        {% capture _category_url %}/categories/{{ category_name | slugify | url_encode }}/{% endcapture %}
+        <li class="nav-item{% if _category_url == page.url %}{{ " active" }}{% endif %}" style="height: auto;">
+          <a href="#{{ collapse_id }}" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="{{collapse_id}}">
+            <span class="ml-xl-3 mr-xl-3">{{ category_name }}
+              <!-- content count -->
+              {% assign top_posts_size = site.categories[category_name] | size %}
+              <span class="badge ml-xl-1 mr-xl-1" style="color: white; background-color: steelblue;">
+                {{ top_posts_size }}
+              </span>
+            </span>
+          </a>
+        </li>
+
+        <div id="{{collapse_id}}" class="collapse list-group-item">
+          <li class="nav-item{% if _category_url == page.url %}{{ " active" }}{% endif %}" style="height: auto;">
+            <a href="{{ _category_url | relative_url }}" class="nav-link">
+              <span class="ml-xl-3 mr-xl-3">See all</span>
+            </a>
+          </li>
+          {% for sub_category in sub_categories %}
+            {% capture _sub_ctg_url %}/categories/{{ sub_category | slugify | url_encode }}/{% endcapture %}
+            <li class="nav-item{% if _sub_ctg_url == page.url %}{{ " active" }}{% endif %}" style="height: auto;">
+              <a href="{{ _sub_ctg_url | relative_url }}" class="nav-link">
+                <span class="ml-xl-3 mr-xl-3">
+                {{ sub_category }}
+                {% assign posts_size = site.categories[sub_category] | size %}
+                  {%- comment -%} <span class="text-muted small font-weight-light ml-xl-1 mr-xl-1"> {%- endcomment -%}
+                  <span class="badge ml-xl-1 mr-xl-1" style="color: white; background-color: steelblue;">
+                    {{ posts_size }}
+                  </span>
+                </span>
+              </a>
+            </li>
+          {% endfor %}
+        </div>
+
+
+          {%- comment -%} <ul class="nav-item{% if _category_url == page.url %}{{ " active" }}{% endif %}">
+          </ul> {%- endcomment -%}
+
+        {%- comment -%} <div class="card categories">
+          <!-- top-category -->
+          <div id="{{ HEAD_PREFIX }}{{ group_index }}"
+            class="card-header d-flex justify-content-between hide-border-bottom">
+            <span>
+              <i class="far fa-folder{% if sub_categories_size > 0 %}-open{% endif %} fa-fw"></i>
+
+              {% capture _category_url %}/categories/{{ category_name | slugify | url_encode }}/{% endcapture %}
+              <a href="{{ _category_url | relative_url }}" class="ml-1 mr-2">{{ category_name }}</a>
+
+              <!-- content count -->
+              {% assign top_posts_size = site.categories[category_name] | size %}
+              <span class="text-muted small font-weight-light">
+                {% if sub_categories_size > 0 %}
+                  {{ sub_categories_size }}
+                  {% if sub_categories_size > 1 %}
+                    {{ site.data.locales[site.lang].categories.category_measure.plural
+                      | default: site.data.locales[site.lang].categories.category_measure }}
+                  {% else %}
+                    {{ site.data.locales[site.lang].categories.category_measure.singular
+                      | default: site.data.locales[site.lang].categories.category_measure }}
+                  {% endif %},
+                {% endif %}
+
+                {{ top_posts_size }}
+
+                {% if top_posts_size > 1 %}
+                  {{ site.data.locales[site.lang].categories.post_measure.plural
+                    | default: site.data.locales[site.lang].categories.post_measure }}
+                {% else %}
+                  {{ site.data.locales[site.lang].categories.post_measure.singular
+                    | default: site.data.locales[site.lang].categories.post_measure }}
+                {% endif %}
+              </span>
+            </span>
+
+            <!-- arrow -->
+            {% if sub_categories_size > 0%}
+            <a href="#{{ LIST_PREFIX }}{{ group_index }}" data-toggle="collapse"
+              aria-expanded="true" aria-label="{{ HEAD_PREFIX }}{{ group_index }}-trigger"
+              class="category-trigger hide-border-bottom">
+              <i class="fas fa-fw fa-angle-down"></i>
+            </a>
+            {% else %}
+            <span data-toggle="collapse" class="category-trigger hide-border-bottom disabled">
+              <i class="fas fa-fw fa-angle-right"></i>
+            </span>
+            {% endif %}
+
+          </div> <!-- .card-header -->
+
+          <!-- Sub-categories -->
+          {% if sub_categories_size > 0 %}
+          <div id="{{ LIST_PREFIX }}{{ group_index }}" class="collapse show" aria-expanded="true">
+            <ul class="list-group">
+              {% for sub_category in sub_categories %}
+              <li class="list-group-item">
+                <i class="far fa-folder fa-fw"></i>
+
+                {% capture _sub_ctg_url %}/categories/{{ sub_category | slugify | url_encode }}/{% endcapture %}
+                <a href="{{ _sub_ctg_url | relative_url }}" class="ml-1 mr-2">{{ sub_category }}</a>
+
+                {% assign posts_size = site.categories[sub_category] | size %}
+                <span class="text-muted small font-weight-light">
+                  {{ posts_size }}
+
+                  {% if posts_size > 1 %}
+                    {{ site.data.locales[site.lang].categories.post_measure.plural
+                      | default: site.data.locales[site.lang].categories.post_measure }}
+                  {% else %}
+                    {{ site.data.locales[site.lang].categories.post_measure.singular
+                      | default: site.data.locales[site.lang].categories.post_measure }}
+                  {% endif %}
+                </span>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+
+        </div> <!-- .card --> {%- endcomment -%}
+
+        {% assign group_index = group_index | plus: 1 %}
+
+      {% endif %}
+    {% endfor %}
+
+
+    <hr/>
+
+    <li class="nav-item{% if page.layout == 'about' %}{{ " active" }}{% endif %}">
+      <a href="{{ '/about' | relative_url }}" class="nav-link" style="text-align: left;">
+        {%- comment -%} <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> {%- endcomment -%}
+        <span class="ml-xl-3 mr-xl-3">{{ site.data.locales[site.lang].tabs.about | upcase }}</span>
+      </a>
+    </li>
+  </ul> <!-- ul.nav.flex-column -->
+
+  <div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center">
+
+    {% unless site.theme_mode %}
+      <button class="mode-toggle btn" aria-label="Switch Mode">
+        <i class="fas fa-adjust"></i>
+      </button>
+
+      {% if site.data.contact.size > 0 %}
+        <span class="icon-border"></span>
+      {% endif %}
+    {% endunless %}
+
+    {% for entry in site.data.contact %}
+      {% capture url %}
+        {%- if entry.type == 'github' -%}
+          https://github.com/{{ site.github.username }}
+        {%- elsif entry.type == 'twitter' -%}
+          https://twitter.com/{{ site.twitter.username }}
+        {%- elsif entry.type == 'email' -%}
+          {% assign email = site.social.email | split: '@' %}
+          javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@')
+        {%- elsif entry.type == 'rss' -%}
+          {{ "/feed.xml" | relative_url }}
+        {%- else -%}
+          {{ entry.url }}
+        {%- endif -%}
+      {% endcapture %}
+
+      {% if url %}
+      <a href="{{ url }}" aria-label="{{ entry.type }}"
+        {% assign link_types = nil %}
+        {% unless entry.noblank %}
+          {% assign link_types = link_types | append: " noopener" %}
+          target="_blank"
+        {% endunless %}
+
+        {% if entry.type == 'mastodon' %}
+          {% assign link_types = link_types | append: " me" %}
+        {% endif %}
+
+        {% if link_types %}rel="{{ link_types | lstrip }}"{% endif %}>
+        <i class="{{ entry.icon }}"></i>
+      </a>
+      {% endif %}
+
+    {% endfor %}
+
+  </div> <!-- .sidebar-bottom -->
+
+</div><!-- #sidebar -->

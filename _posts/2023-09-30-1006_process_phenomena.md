@@ -1,7 +1,7 @@
 ---
 date: 2023-09-30 13:16:00 +/-0900
 title: "[CS] 프로세스와 스레드 05 - 프로세스와 여러 현상"
-categories: [Computer_Science, concept]
+categories: [Computer Science, concept]
 tags: [컴퓨터과학(computer_science), 개념(concept), 프로세스(process)]
 
 ---
