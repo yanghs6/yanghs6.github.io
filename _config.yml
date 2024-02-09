@@ -175,7 +175,8 @@ sass:
 compress_html:
   clippings: all
   comments: all
-  endings: all
+  # This option breaks custom sidebar.
+  # endings: all
   profile: false
   blanklines: false
   ignore:

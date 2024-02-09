@@ -219,7 +219,7 @@
       {% endif %}
     {% endunless %}
 
-    {% for entry in site.data.contact %}
+    {% for entry in site.data.contact -%}
       {% capture url %}
         {%- if entry.type == 'github' -%}
           https://github.com/{{ site.github.username }}
@@ -252,7 +252,7 @@
       </a>
       {% endif %}
 
-    {% endfor %}
+    {% endfor -%}
 
   </div> <!-- .sidebar-bottom -->
 
