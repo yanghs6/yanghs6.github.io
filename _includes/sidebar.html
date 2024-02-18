@@ -69,7 +69,6 @@
     <!-- home -->
     <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
       <a href="{{ '/' | relative_url }}" class="nav-link">
-        {%- comment -%} <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> {%- endcomment -%}
         <span class="ml-xl-3 mr-xl-3">{{ site.data.locales[site.lang].tabs.home | upcase }}</span>
       </a>
     </li>
@@ -116,7 +115,7 @@
         <li class="nav-item{% if _category_url == page.url or category_name == page.categories[0] or category_name == page_category %}{{ " active" }}{% endif %} h-auto">
           <a class="nav-link w-100">
             <button class="nav-link w-100" data-toggle="collapse" data-target="#{{ collapse_id }}" aria-expanded="false" aria-controls="{{ collapse_id }}" style="background:none; border:none">
-              {{category_name}}
+              {{category_name | upcase }}
               {% assign top_posts_size = site.categories[category_name] | size %}
               <span class="badge ml-xl-1 mr-xl-1 post-badge">
                 {{ top_posts_size }}
@@ -136,7 +135,7 @@
             <li class="nav-item{% if _sub_ctg_url == page.url or sub_category == page.categories[1] %}{{ " active" }}{% endif %} h-auto">
               <a href="{{ _sub_ctg_url | relative_url }}" class="nav-link">
                 <span class="ml-xl-3 mr-xl-3">
-                {{ sub_category }}
+                {{ sub_category |  capitalize }}
                 {% assign posts_size = site.categories[sub_category] | size %}
                   <span class="badge ml-xl-1 mr-xl-1 post-badge">
                     {{ posts_size }}
@@ -152,6 +151,7 @@
 
     <hr/>
 
+    <!-- about -->
     <li class="nav-item{% if page.layout == 'about' %}{{ " active" }}{% endif %}">
       <a href="{{ '/about' | relative_url }}" class="nav-link">
         <span class="ml-xl-3 mr-xl-3">{{ site.data.locales[site.lang].tabs.about | upcase }}</span>
