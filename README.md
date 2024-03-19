@@ -9,6 +9,7 @@
   - 220220: mathjax 임시 추가
   - 220411: 이미지 디렉터리 구조 변경
   - 230103: Chirpy 버전 업그레이드 (v5.0.2 -> v5.4.0)
+  - 240213: Custom sidebar 제작
 
 ---
 다음 글은 기본 Chirpy 테마의 설명입니다.
@@ -59,4 +60,4 @@
 > [use-template]: https://github.com/cotes2020/chirpy-starter/generate
 > [CD]: https://en.wikipedia.org/wiki/Continuous_deployment
 > [mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
-> 
+>
