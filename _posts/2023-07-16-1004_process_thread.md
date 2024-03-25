@@ -3,6 +3,7 @@ date: 2023-07-16 21:10:00 +/-0900
 title: "[CS] 프로세스와 스레드 03 - 스레드의 개념과 구현"
 categories: [Computer Science, general]
 tags: [컴퓨터과학(computer_science), 개념(concept), 프로그램(program), 프로세스(process), 스레드(thread), 메모리(memory), 상태(state)]
+description: 프로세스와 스레드 시리즈로 스레드와 그 구현 방법에 대해 살펴봅니다.
 
 ---
 ## 개요

@@ -3,6 +3,7 @@ date: 2023-05-21 16:26:00 +/-0900
 title: "[Python] Python Logging 기본"
 categories: [Develop, python]
 tags: [파이썬(python), 로깅(logging)]
+description: Python의 logging에 대해 살펴봅니다.
 
 ---
 ## 개요

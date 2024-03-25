@@ -3,6 +3,7 @@ date: 2023-01-04 20:38:00 +/-0900
 title: "[Gibhub Action] Chirpy 업데이트 및 오류 해결"
 categories: [Develop, distribute]
 tags: [개발(develop), 블로그(blog), 배포(distribute), 깃헙액션(github_action), 깃헙페이지(github_page)]
+description: Chirpy 버전 업데이트 과정과 오류를 살펴봅니다.
 
 ---
 ## 개요

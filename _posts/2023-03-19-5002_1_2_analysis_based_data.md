@@ -3,6 +3,7 @@ date: 2023-03-19 13:10:00 +/-0900
 title: "[Data] [빅데이터를 지탱하는 기술] 정리하기 - 1-2 빅데이터 시대의 데이터 분석 기반"
 categories: [Data, concept]
 tags: [데이터(data), 개념(concept), 역사(history), 빅데이터(bigdata), 데이터파이프라인(data_pipeline), 분산스토리지(distributed_storage), 워크플로관리(workflow_management), 데이터웨어하우스(data_warehouse), 데이터레이크(data_lake), 데이터마트(data_mart), 대시보드(dashboard)]
+description: 빅데이터를 지탱하는 기술 시리즈로 1장 2절, 빅데이터 시대의 데이터 분석 기반을 정리했습니다.
 
 ---
 ## 개요

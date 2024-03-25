@@ -3,6 +3,7 @@ date: 2023-04-09 15:26:00 +/-0900
 title: "[Data] [빅데이터를 지탱하는 기술] 정리하기 - 1-4 BI 도구와 모니터링"
 categories: [Data, concept]
 tags: [데이터(data), 개념(concept), 모니터링(monitoring), 애드혹(adhoc), 스프레드시트(spreadsheet), 데이터웨어하우스(data_warehouse), 데이터마트(data_mart), bi, kpi]
+description: 빅데이터를 지탱하는 기술 시리즈로 1장 4절, BI와 모니터링을 정리했습니다.
 
 ---
 ## 개요

@@ -3,6 +3,7 @@ date: 2023-11-23 19:35:00 +/-0900
 title: "[Python] Python convert PDF to Image"
 categories: [Develop, python]
 tags: [개발(develop), 파이썬(python), 이미지(image), pdf]
+description: Python을 이용해 PDF 파일을 이미지로 변환하는 방법을 살펴봅니다.
 
 ---
 ## 개요

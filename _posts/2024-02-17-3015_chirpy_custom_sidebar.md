@@ -3,6 +3,7 @@ date: 2024-02-17 13:02:00 +/-0900
 title: "[Jekyll] Chirpy 테마에 custom sidebar 적용하기"
 categories: [Develop, web]
 tags: [개발(develop), 블로그(blog), jekyll, html, liquid]
+description: Jekyll의 Chirpy 테마에 custom한 sidebar를 적용하는 과정을 담았습니다.
 
 ---
 ## 개요

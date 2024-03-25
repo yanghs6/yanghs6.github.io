@@ -3,6 +3,7 @@ date: 2024-01-03 21:23:00 +/-0900
 title: "[Python] Python Typehint 살펴보기 + 정적 언어처럼 동작 시켜보기"
 categories: [Develop, python]
 tags: [파이썬(python), 타입(type), 동적언어(dynamic_programming_language), 정적언어(static_programming_language), 데코레이터(decorator), inspect, typing, typehint]
+description: Python의 Typehint에 대해 살펴보고 이를 활용한 타입체크를 수행합니다.
 
 ---
 ## 개요
@@ -292,7 +293,7 @@ typehint이 작은 촛불처럼 이 그림자를 비추지만 혼자서는 아�
 ## 참고 문헌
 
 - typing — 형 힌트 지원, [https://docs.python.org/ko/3/library/typing.html?highlight=typing#](https://docs.python.org/ko/3/library/typing.html?highlight=typing#)
-- inspect — 라이브 객체 검사, [https://docs.python.org/ko/3/library/inspect.html#introspecting-callables-with-the-signature-object](https://docs.python.org/ko/3/library/inspect.- html#introspecting-callables-with-the-signature-object)
+- inspect — 라이브 객체 검사, [https://docs.python.org/ko/3/library/inspect.html#introspecting-callables-with-the-signature-object](https://docs.python.org/ko/3/library/inspect.html#introspecting-callables-with-the-signature-object)
 - Python Generic Type, [https://hides.kr/1106](https://hides.kr/1106)
 - [알고리즘] 깊이 우선 탐색(DFS) 알고리즘에 대해 알아보자!(+Python 구현), [https://heytech.tistory.com/55](https://heytech.tistory.com/55)
 - 데코레이터 [https://dojang.io/mod/page/view.php?id=2429](https://dojang.io/mod/page/view.php?id=2429)

@@ -3,6 +3,7 @@ date: 2023-05-12 16:26:00 +/-0900
 title: "[Data] 블로그 데이터 파이프라인 만들기 - 03. GA4와 BigQuery 연결"
 categories: [Data, datapipeline]
 tags: [데이터(data), 파이프라인(pipeline), 빅쿼리(bigquery), 데이터웨어하우스(data_warehouse), 집계(aggregation)]
+description: 블로그 데이터 파이프라인 만들기 시리즈로 GA4와 BigQuery를 연결하는 방법을 알아봅니다.
 
 ---
 ## 개요

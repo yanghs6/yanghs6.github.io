@@ -3,6 +3,7 @@ date: 2023-01-23 16:51:00 +/-0900
 title: "[Python] Dictionary를 합치는 방법"
 categories: [Develop, python]
 tags: [개발(develop), 파이썬(python), 딕셔너리(dictionary), 팁(tip)]
+description: Python의 dictionary를 합치는 다양한 방법을 살펴봅니다.
 
 ---
 ## 개요

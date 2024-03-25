@@ -3,6 +3,7 @@ date: 2023-01-27 19:54:00 +/-0900
 title: "[Python] Python Interpreter 동작 방식 살펴보기"
 categories: [Develop, python]
 tags: [개발(develop), 파이썬(python), 인터프리터(interpreter), 컴파일러(compiler), ast(abstract_syntax_tree), 가상머신(virtual_machine), 컴파일타임(compile_time), 런타임(runtime)]
+description: Python의 Interpreter를 살펴봅니다.
 
 ---
 ## 개요

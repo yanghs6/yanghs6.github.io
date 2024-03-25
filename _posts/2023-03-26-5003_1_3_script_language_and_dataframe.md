@@ -3,6 +3,7 @@ date: 2023-03-26 22:26:00 +/-0900
 title: "[Data] [빅데이터를 지탱하는 기술] 정리하기 - 1-3 [속성 학습] 스크립트 언어에 대한 특별 분석과 데이터 프레임"
 categories: [Data, concept]
 tags: [데이터(data), 개념(concept), 파이썬(python), 데이터프레임(data_frame), 전처리(preprocessing), 정규표현(regular_expression), adhoc, r, sql]
+description: 빅데이터를 지탱하는 기술 시리즈로 1장 3절, 스크립트 언어에 대한 특별 분석과 데이터 프레임을 정리했습니다..
 
 ---
 ## 개요

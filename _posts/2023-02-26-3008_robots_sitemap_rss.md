@@ -3,13 +3,14 @@ date: 2023-02-26 22:48:00 +/-0900
 title: "[Web] robots, sitemap, RSS"
 categories: [Develop, web]
 tags: [개발(develop), 웹(web), 블로그(blog), 검색엔진(search_engine), 웹크롤링(web_crawling), 웹스크래핑(web_scraping) robots, sitemap, rss]
+description: 사이트 외부 접근을 위한 robots.txt, sitemap.xml, RSS의 개념을 살펴봅니다.
 
 ---
 ## 개요
 
 안녕하세요.
 
-이번 글에서는 robots.txt, sitemap.xml, RSS의 개념을 살펴보겠습니다.
+이번 글에서는 사이트 외부 접근을 위한 robots.txt, sitemap.xml, RSS의 개념을 살펴보겠습니다.
 
 ---
 ## 외부의 접근
