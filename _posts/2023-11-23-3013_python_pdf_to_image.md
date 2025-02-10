@@ -316,7 +316,7 @@ MacBook Pro M1|adventuresofsher00doylrich.pdf|72|112.511795|122.892233
 ---
 ## 참고 문헌
 
-- PDF, Wikipedia, [https://en.wikipedia.org/wiki/PDF]()https://en.wikipedia.org/wiki/PDF
+- PDF, Wikipedia, [https://en.wikipedia.org/wiki/PDF](https://en.wikipedia.org/wiki/PDF)
 - Welcome to pypdf, pypdf 3.16.1 documentation, [https://pypdf.readthedocs.io/en/latest/index.html](https://pypdf.readthedocs.io/en/latest/index.html)
 - Welcome to PyMuPDF, PyMuPDF 1.23.3 documentation, [https://pymupdf.readthedocs.io/en/latest/](https://pymupdf.readthedocs.io/en/latest/)
 - Belval_pdf2image, GitHub, [https://github.com/Belval/pdf2image](https://github.com/Belval/pdf2image)
