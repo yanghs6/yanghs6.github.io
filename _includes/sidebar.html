@@ -1,18 +1,26 @@
-<!--
-  The Side Bar
--->
+<!-- The Side Bar -->
 <style>
+  :root {
+    /* Unable to recognize the variable, forcibly specified */
+    --bs-list-group-item-padding-y: 0.75rem;
+    --bs-list-group-item-padding-x: 1.25rem;
+  }
+
   #sidebar > ul {
     overflow: auto;
     height: auto;
   }
-  #sidebar ul > li > a > button {
+  #sidebar ul > li > a,
+  /* #sidebar ul > li > a > button, */
+  #sidebar ul > li > button
+  {
     color: rgba(117,117,117,.9);
     text-decoration: none;
     background:none;
     border:none;
   }
-  #sidebar ul > li > a > button:hover {
+  #sidebar ul > li > button:hover,
+    #sidebar ul > li > a > button:hover {
     text-decoration: none;
     color: var(--sidebar-active-color) !important;
     transition: color .35s ease-in-out;
@@ -25,187 +33,223 @@
     padding: 0;
   }
   
+  #sidebar .nav-item {
+    justify-items: center;
+  }
+
+  #sidebar > nav > ul > hr {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  #sidebar ul > li > button {
+    border-radius: 0.75rem;
+    font-weight: 600;
+  }
+
   {% for i in (1..5) %}
     #sidebar ul>li.active:nth-child({{i}})~li:last-child::after,#sidebar ul>li.nav-item:nth-child({{i}}):hover~li:last-child::after {
         visibility: hidden
     }
   {% endfor %}
 
+  #sidebar .profile-wrapper {
+    text-align: center;
+    justify-items: center;
+    padding-left: 1.25rem;
+  }
+  
   @media (min-width: 1650px) {
+    #sidebar .nav-item,
     #sidebar ul > li > a > button {
-        text-align: left;
+      /* text-align: left; */
+      justify-items: left;
+      text-align-last: left;
+    }
+    #sidebar .profile-wrapper {
+      justify-items: left;
+      text-align: left;
+      padding-left: 3.5rem;
     }
   }
+  
 </style>
 
-<div id="sidebar" class="d-flex flex-column align-items-end">
-  <div class="profile-wrapper text-center">
-    <div id="avatar">
-      <a href="{{ '/' | relative_url }}" class="mx-auto">
-        {% if site.avatar != empty and site.avatar %}
-          {% capture avatar_url %}
-            {% if site.avatar contains '://' %}
-              {{ site.avatar }}
-            {% elsif site.img_cdn != empty and site.img_cdn %}
-              {{ site.avatar | prepend: site.img_cdn }}
-            {% else %}
-              {{ site.avatar | relative_url }}
-            {% endif %}
-          {% endcapture %}
-          <img src="{{ avatar_url | strip }}" alt="avatar" onerror="this.style.display='none'">
-        {% endif %}
+
+<aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
+    <header class="profile-wrapper">
+      <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
+        {%- if site.avatar != empty and site.avatar -%}
+          {%- capture avatar_url -%}
+            {% include media-url.html src=site.avatar %}
+          {%- endcapture -%}
+          <img src="{{- avatar_url -}}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
+        {%- endif -%}
       </a>
-    </div>
-
-    <div class="site-title">
-      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    </div>
-    <div class="site-subtitle font-italic">{{ site.tagline }}</div>
-
-  </div><!-- .profile-wrapper -->
-
-  <ul class="w-100">
-
-    <!-- home -->
-    <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
-      <a href="{{ '/' | relative_url }}" class="nav-link">
-        <span class="ml-xl-3 mr-xl-3">{{ site.data.locales[site.lang].tabs.home | upcase }}</span>
-      </a>
-    </li>
-
-    <hr/>
-
-    <!-- the real tabs -->
-    {% assign group_index = 0 %}
-    {% assign category_map = "" | split: "" %}
-
-    {% assign sort_categories = site.categories | sort %}
-
-    {% comment %} ----------- {% endcomment %}
-    {% assign page_subcategory = page.url | split:"/" | last %}
-    {% comment %} ----------- {% endcomment %}
-
-    {% for category in sort_categories %}
-      {% assign category_name = category | first %}
-      {% assign posts_of_category = category | last %}
-      {% assign first_post = posts_of_category | first %}
-
-      {% if category_name == first_post.categories[0] %}
-        {% assign sub_categories = "" | split: "" %}
-
-        {% for post in posts_of_category %}
-          {% assign second_category = post.categories[1] %}
-
-          {% if second_category == page_subcategory %}
-            {% assign page_category = category_name %}
-          {% endif %}
-          
-          {% if second_category %}
-            {% unless sub_categories contains second_category %}
-              {% assign sub_categories = sub_categories | push: second_category %}
-            {% endunless %}
-          {% endif %}
-        {% endfor %}
-
-        {% assign sub_categories = sub_categories | sort %}
-        {% assign sub_categories_size = sub_categories | size %}
-        
-        {% capture collapse_id %}collapse_menu_{{group_index}}{% endcapture %}
-        {% capture _category_url %}/categories/{{ category_name | slugify | url_encode }}/{% endcapture %}
-        <li class="nav-item{% if _category_url == page.url or category_name == page.categories[0] or category_name == page_category %}{{ " active" }}{% endif %} h-auto">
-          <a class="nav-link w-100">
-            <button class="nav-link w-100" data-toggle="collapse" data-target="#{{ collapse_id }}" aria-expanded="false" aria-controls="{{ collapse_id }}" style="background:none; border:none">
-              {{category_name | upcase }}
-              {% assign top_posts_size = site.categories[category_name] | size %}
-              <span class="badge ml-xl-1 mr-xl-1 post-badge">
-                {{ top_posts_size }}
-              </span>
-            </button>
+  
+      <a class="site-title d-block" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
+    </header>
+    <!-- .profile-wrapper -->
+  
+    <nav class="flex-column flex-grow-1 w-100 ps-0">
+      <ul class="nav">
+        <!-- home -->
+        <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %} w-100">
+          <a href="{{ '/' | relative_url }}" class="nav-link">
+          <span class="ml-xl-3 mr-xl-3">{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
           </a>
         </li>
+        <!-- home -->
 
-        <div id="{{collapse_id}}" class="collapse {% if _category_url == page.url or category_name == page.categories[0] or category_name == page_category %} show {% endif %} list-group-item {{collapse_id}}">
-          <li class="nav-item{% if _category_url == page.url %}{{ " active" }}{% endif %} h-auto">
-            <a href="{{ _category_url | relative_url }}" class="nav-link">
-              <span class="ml-xl-3 mr-xl-3">See all</span>
-            </a>
-          </li>
-          {% for sub_category in sub_categories %}
-            {% capture _sub_ctg_url %}/categories/{{ sub_category | slugify | url_encode }}/{% endcapture %}
-            <li class="nav-item{% if _sub_ctg_url == page.url or sub_category == page.categories[1] %}{{ " active" }}{% endif %} h-auto">
-              <a href="{{ _sub_ctg_url | relative_url }}" class="nav-link">
-                <span class="ml-xl-3 mr-xl-3">
-                {{ sub_category |  capitalize }}
-                {% assign posts_size = site.categories[sub_category] | size %}
-                  <span class="badge ml-xl-1 mr-xl-1 post-badge">
-                    {{ posts_size }}
-                  </span>
+        <hr/>
+
+        <!-- the real tabs -->
+        {% assign group_index = 0 %}
+        {% assign category_map = "" | split: "" %}
+    
+        {% assign sort_categories = site.categories | sort %}
+
+        {% comment %} ----------- {% endcomment %}
+        {% assign page_subcategory = page.url | split:"/" | last %}
+        {% comment %} ----------- {% endcomment %}    
+
+        {% comment %} {{site.categories | sort}} {% endcomment %}
+        {% comment %} {{group_index}} {% endcomment %}
+        {% comment %} {{category_map}} {% endcomment %}
+        {% comment %} {{sort_categories}} {% endcomment %}
+        {% comment %} {{page_subcategory}} {% endcomment %}
+
+
+        {% for category in sort_categories %}
+          {% assign category_name = category | first %}
+          {% assign posts_of_category = category | last %}
+          {% assign first_post = posts_of_category | first %}
+    
+          {% if category_name == first_post.categories[0] %}
+            {% assign sub_categories = "" | split: "" %}
+    
+            {% for post in posts_of_category %}
+              {% assign second_category = post.categories[1] %}
+    
+              {% if second_category == page_subcategory %}
+                {% assign page_category = category_name %}
+              {% endif %}
+              
+              {% if second_category %}
+                {% unless sub_categories contains second_category %}
+                  {% assign sub_categories = sub_categories | push: second_category %}
+                {% endunless %}
+              {% endif %}
+            {% endfor %}
+    
+            {% assign sub_categories = sub_categories | sort %}
+            {% assign sub_categories_size = sub_categories | size %}
+            
+            {% capture collapse_id %}collapse_menu_{{group_index}}{% endcapture %}
+            {% capture _category_url %}/categories/{{ category_name | slugify | url_encode }}/{% endcapture %}
+            <li class="nav-item{% if _category_url == page.url or category_name == page.categories[0] or category_name == page_category %}{{ " active" }}{% endif %} h-auto">
+              <button class="nav-link w-100" data-bs-toggle="collapse" data-bs-target="#{{ collapse_id }}" aria-expanded="false" aria-controls="{{ collapse_id }}">
+                {{category_name | upcase }}
+                {% assign top_posts_size = site.categories[category_name] | size %}
+                <span class="badge ml-xl-1 mr-xl-1 post-badge">
+                  {{ top_posts_size }}
                 </span>
-              </a>
+              </button>
             </li>
-          {% endfor %}
-        </div>
-        {% assign group_index = group_index | plus: 1 %}
-      {% endif %}
-    {% endfor %}
+    
+            <div id="{{collapse_id}}" class="collapse {% if _category_url == page.url or category_name == page.categories[0] or category_name == page_category %} show {% endif %} list-group-item {{collapse_id}} w-100">
+              <li class="nav-item{% if _category_url == page.url %}{{ " active" }}{% endif %} h-auto">
+                <a href="{{ _category_url | relative_url }}" class="nav-link">
+                  <span class="ml-xl-3 mr-xl-3">See all</span>
+                </a>
+              </li>
+              {% for sub_category in sub_categories %}
+                {% capture _sub_ctg_url %}/categories/{{ sub_category | slugify | url_encode }}/{% endcapture %}
+                <li class="nav-item{% if _sub_ctg_url == page.url or sub_category == page.categories[1] %}{{ " active" }}{% endif %} h-auto">
+                  <a href="{{ _sub_ctg_url | relative_url }}" class="nav-link">
+                    <span class="ml-xl-3 mr-xl-3">
+                    {{ sub_category |  capitalize }}
+                    {% assign posts_size = site.categories[sub_category] | size %}
+                      <span class="badge ml-xl-1 mr-xl-1 post-badge">
+                        {{ posts_size }}
+                      </span>
+                    </span>
+                  </a>
+                </li>
+              {% endfor %}
+            </div>
+            {% assign group_index = group_index | plus: 1 %}
+          {% endif %}
+        <!-- .nav-item -->
+        {% endfor %}
+        <!-- the real tabs -->
 
-    <hr/>
+        <hr/>
 
-    <!-- about -->
-    <li class="nav-item{% if page.layout == 'about' %}{{ " active" }}{% endif %}">
-      <a href="{{ '/about' | relative_url }}" class="nav-link">
-        <span class="ml-xl-3 mr-xl-3">{{ site.data.locales[site.lang].tabs.about | upcase }}</span>
-      </a>
-    </li>
-  </ul> <!-- ul.nav.flex-column -->
-
-  <div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center">
-
-    {% unless site.theme_mode %}
-      <button class="mode-toggle btn" aria-label="Switch Mode">
-        <i class="fas fa-adjust"></i>
-      </button>
-
-      {% if site.data.contact.size > 0 %}
-        <span class="icon-border"></span>
-      {% endif %}
-    {% endunless %}
-
-    {% for entry in site.data.contact -%}
-      {% capture url %}
-        {%- if entry.type == 'github' -%}
-          https://github.com/{{ site.github.username }}
-        {%- elsif entry.type == 'twitter' -%}
-          https://twitter.com/{{ site.twitter.username }}
-        {%- elsif entry.type == 'email' -%}
-          {% assign email = site.social.email | split: '@' %}
-          javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@')
-        {%- elsif entry.type == 'rss' -%}
-          {{ "/feed.xml" | relative_url }}
-        {%- else -%}
-          {{ entry.url }}
-        {%- endif -%}
-      {% endcapture %}
-
-      {% if url %}
-      <a href="{{ url }}" aria-label="{{ entry.type }}"
-        {% assign link_types = nil %}
-        {% unless entry.noblank %}
-          {% assign link_types = link_types | append: " noopener" %}
-          target="_blank"
-        {% endunless %}
-
-        {% if entry.type == 'mastodon' %}
-          {% assign link_types = link_types | append: " me" %}
+        <!-- about -->
+        <li class="nav-item{% if page.url == "/about/" %}{{ " active" }}{% endif %}">
+          <a href="{{ '/about' | relative_url }}" class="nav-link">
+          <span class="ml-xl-3 mr-xl-3">{{ site.data.locales[include.lang].tabs.about | upcase }}</span>
+          </a>
+        </li>
+        <!-- about -->
+      </ul>
+    </nav>
+  
+    <!-- .sidebar-bottom -->
+    <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
+      {% unless site.theme_mode %}
+        <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
+          <i class="fas fa-adjust"></i>
+        </button>
+  
+        {% if site.data.contact.size > 0 %}
+          <span class="icon-border"></span>
         {% endif %}
-
-        {% if link_types %}rel="{{ link_types | lstrip }}"{% endif %}>
-        <i class="{{ entry.icon }}"></i>
-      </a>
-      {% endif %}
-
-    {% endfor -%}
-
-  </div> <!-- .sidebar-bottom -->
-
-</div><!-- #sidebar -->
+      {% endunless %}
+  
+      {% for entry in site.data.contact %}
+        {% case entry.type %}
+          {% when 'github', 'twitter' %}
+            {%- capture url -%}
+              https://{{ entry.type }}.com/{{ site[entry.type].username }}
+            {%- endcapture -%}
+          {% when 'email' %}
+            {% assign email = site.social.email | split: '@' %}
+            {%- capture url -%}
+              javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@')
+            {%- endcapture -%}
+          {% when 'rss' %}
+            {% assign url = '/feed.xml' | relative_url %}
+          {% else %}
+            {% assign url = entry.url %}
+        {% endcase %}
+  
+        {% if url %}
+          <a
+            href="{{ url }}"
+            aria-label="{{ entry.type }}"
+            {% assign link_types = '' %}
+  
+            {% unless entry.noblank %}
+              target="_blank"
+              {% assign link_types = 'noopener noreferrer' %}
+            {% endunless %}
+  
+            {% if entry.type == 'mastodon' %}
+              {% assign link_types = link_types | append: ' me' | strip %}
+            {% endif %}
+  
+            {% unless link_types == empty %}
+              rel="{{ link_types }}"
+            {% endunless %}
+          >
+            <i class="{{ entry.icon }}"></i>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <!-- .sidebar-bottom -->
+  </aside>
+  <!-- #sidebar -->
